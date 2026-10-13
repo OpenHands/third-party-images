@@ -8,6 +8,7 @@ Images publish to `ghcr.io/openhands/third-party-images/<name>:<tag>`. Each imag
 |---|---|---|
 | `keycloak:26.3.0-debian-12-r0-oh1` | `bitnamilegacy/keycloak:26.3.0-debian-12-r0` | Debian updates, `wait-for-port` rebuilt on current Go |
 | `keycloak:26.7.5-debian-12-oh1` | `bitnamilegacy/keycloak:26.3.0-debian-12-r0` | As above, plus upstream Keycloak 26.7.5 and Temurin 21.0.12 in the Bitnami layout. Upgrading migrates the Keycloak database one way |
+| `keycloak:26.8.0-debian-12-oh1` | `bitnamilegacy/keycloak:26.3.0-debian-12-r0` | As above with upstream Keycloak 26.8.0, the oldest Keycloak with no fixable critical or high findings. Upgrading migrates the Keycloak database one way |
 | `postgresql:16.4.0-debian-12-r28-oh1` | `bitnamilegacy/postgresql:16.4.0-debian-12-r28` | Debian updates |
 | `redis:7.4.3-debian-12-r0-oh1` | `bitnamilegacy/redis:7.4.3-debian-12-r0` | Debian updates, `wait-for-port` rebuilt on current Go |
 | `postgres:15.19-oh1` | `postgres:15` (Laminar) | `gosu` rebuilt on current Go |
