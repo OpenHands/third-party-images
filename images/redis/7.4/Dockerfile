@@ -1,0 +1,16 @@
+# syntax=docker/dockerfile:1
+FROM --platform=$BUILDPLATFORM docker.io/library/golang:1.26.9-bookworm@sha256:d9c68c2c51161e12fd77e4c6320687c9cd86e1af1e3ad6e6cd63ff970641453c AS wait-for-port
+ARG TARGETOS TARGETARCH
+RUN git clone --depth 1 --branch v1.0.11 https://github.com/bitnami/wait-for-port /src \
+    && cd /src \
+    && CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -trimpath -ldflags="-s -w" -o /out/wait-for-port .
+
+FROM docker.io/bitnamilegacy/redis:7.4.3-debian-12-r0@sha256:a25b5d07a14ec13730022c7cd9bab6308d55ccd86b74af7315553c17be884889
+USER root
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -f /opt/bitnami/common/.spdx-wait-for-port.*
+COPY --from=wait-for-port /out/wait-for-port /opt/bitnami/common/bin/wait-for-port
+USER 1001

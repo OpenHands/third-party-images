@@ -1,0 +1,7 @@
+[
+  {"name": "keycloak", "context": "images/keycloak/26.3", "tag": "26.3.0-debian-12-r0-oh1"},
+  {"name": "keycloak", "context": "images/keycloak/26.7", "tag": "26.7.5-debian-12-oh1"},
+  {"name": "postgresql", "context": "images/postgresql/16.4", "tag": "16.4.0-debian-12-r28-oh1"},
+  {"name": "redis", "context": "images/redis/7.4", "tag": "7.4.3-debian-12-r0-oh1"},
+  {"name": "postgres", "context": "images/postgres/15", "tag": "15.19-oh1"}
+]
