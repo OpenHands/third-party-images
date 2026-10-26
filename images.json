@@ -6,9 +6,11 @@
   {"name": "redis", "context": "images/redis/7.4", "tag": "7.4.3-debian-12-r0-oh1"},
   {"name": "postgres", "context": "images/postgres/15", "tag": "15.19-oh1"},
   {"name": "generic-device-plugin", "context": "images/generic-device-plugin/2cc50b0", "tag": "2cc50b0-oh1"},
-  {"name": "keycloak", "context": "images/keycloak/26.8", "tag": "26.8.1-debian-12-oh1"},
+  {"name": "keycloak", "context": "images/keycloak/26.8.1", "tag": "26.8.1-debian-12-oh1"},
   {"name": "postgresql", "context": "images/postgresql/16.15", "tag": "16.15.0-debian-12-oh1"},
   {"name": "redis", "context": "images/redis/7.4", "tag": "7.4.12-debian-12-oh1"},
   {"name": "postgres", "context": "images/postgres/15", "tag": "15.19-oh2"},
-  {"name": "rabbitmq", "context": "images/rabbitmq/4.4", "tag": "4.4.0-oh1"}
+  {"name": "rabbitmq", "context": "images/rabbitmq/4.4", "tag": "4.4.0-oh1"},
+  {"name": "keycloak", "context": "images/keycloak/26.8", "tag": "26.8.0-debian-12-oh2"},
+  {"name": "rabbitmq", "context": "images/rabbitmq/4.4", "tag": "4.4.0-oh2"}
 ]
