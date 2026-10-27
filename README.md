@@ -2,7 +2,7 @@
 
 Rebuilds of third-party images that the OpenHands Helm charts deploy, at the same upstream versions, with OS packages and bundled Go helpers updated to clear fixable vulnerabilities.
 
-Images publish to `ghcr.io/openhands/third-party-images/<name>:<tag>`. Each image keeps the last path segment of the image it replaces (`keycloak`, `postgresql`, `redis`, `postgres`, `rabbitmq`, `valkey`, `nginx`, `curl`, `generic-device-plugin`), because Replicated airgap installs address images by that segment alone.
+Images publish to `ghcr.io/openhands/third-party-images/<name>:<tag>`. Each image keeps the last path segment of the image it replaces (`keycloak`, `postgresql`, `redis`, `postgres`, `rabbitmq`, `valkey`, `nginx`, `curl`, `app-server-ee`, `frontend-ee`, `frontend-ee-basepath`, `generic-device-plugin`), because Replicated airgap installs address images by that segment alone.
 
 | Image | Replaces | What changes |
 |---|---|---|
@@ -22,6 +22,9 @@ Images publish to `ghcr.io/openhands/third-party-images/<name>:<tag>`. Each imag
 | `valkey:9.1.2-alpine-oh1` | `valkey/valkey:9.1.2-alpine` (Laminar) | Alpine updates |
 | `nginx:1.31.8-oh1` | `nginx:1.31.8` (Laminar) | Debian updates, nginx packages held at 1.31.8 |
 | `curl:8.23.0-oh1` | `curlimages/curl:8.23.0` (Laminar) | Alpine updates |
+| `app-server-ee:0.1.825-oh1` | `ghcr.io/lmnr-ai/app-server-ee:0.1.825` (Laminar) | Debian updates |
+| `frontend-ee:0.1.825-oh1` | `ghcr.io/lmnr-ai/frontend-ee:0.1.825` (Laminar) | Alpine updates |
+| `frontend-ee-basepath:0.1.825-oh1` | `ghcr.io/lmnr-ai/frontend-ee-basepath:0.1.825` (Laminar) | Alpine updates |
 | `generic-device-plugin:2cc50b0-oh1` | `ghcr.io/squat/generic-device-plugin:2cc50b0` | Built from the [OpenHands fork](https://github.com/OpenHands/generic-device-plugin) on current Go, with `grpc`, `x/net` and `x/text` bumped |
 
 ## Building
