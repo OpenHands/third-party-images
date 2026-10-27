@@ -2,7 +2,7 @@
 
 Rebuilds of third-party images that the OpenHands Helm charts deploy, at the same upstream versions, with OS packages and bundled Go helpers updated to clear fixable vulnerabilities.
 
-Images publish to `ghcr.io/openhands/third-party-images/<name>:<tag>`. Each image keeps the last path segment of the image it replaces (`keycloak`, `postgresql`, `redis`, `postgres`, `rabbitmq`, `generic-device-plugin`), because Replicated airgap installs address images by that segment alone.
+Images publish to `ghcr.io/openhands/third-party-images/<name>:<tag>`. Each image keeps the last path segment of the image it replaces (`keycloak`, `postgresql`, `redis`, `postgres`, `rabbitmq`, `valkey`, `nginx`, `curl`, `generic-device-plugin`), because Replicated airgap installs address images by that segment alone.
 
 | Image | Replaces | What changes |
 |---|---|---|
@@ -19,6 +19,9 @@ Images publish to `ghcr.io/openhands/third-party-images/<name>:<tag>`. Each imag
 | `postgres:15.19-oh2` | `postgres:15` (Laminar) | Same as `15.19-oh1` on a newer upstream digest and Go |
 | `rabbitmq:4.4.0-oh1` | `rabbitmq:4.4.0` (Laminar) | Ubuntu updates, `gosu` rebuilt on current Go |
 | `rabbitmq:4.4.0-oh2` | `rabbitmq:4.4.0` (Laminar) | As above, plus the base's `pebble` rebuilt at v1.33.0 on current Go |
+| `valkey:9.1.2-alpine-oh1` | `valkey/valkey:9.1.2-alpine` (Laminar) | Alpine updates |
+| `nginx:1.31.8-oh1` | `nginx:1.31.8` (Laminar) | Debian updates, nginx packages held at 1.31.8 |
+| `curl:8.23.0-oh1` | `curlimages/curl:8.23.0` (Laminar) | Alpine updates |
 | `generic-device-plugin:2cc50b0-oh1` | `ghcr.io/squat/generic-device-plugin:2cc50b0` | Built from the [OpenHands fork](https://github.com/OpenHands/generic-device-plugin) on current Go, with `grpc`, `x/net` and `x/text` bumped |
 
 ## Building

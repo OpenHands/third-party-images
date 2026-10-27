@@ -12,5 +12,8 @@
   {"name": "postgres", "context": "images/postgres/15", "tag": "15.19-oh2"},
   {"name": "rabbitmq", "context": "images/rabbitmq/4.4", "tag": "4.4.0-oh1"},
   {"name": "keycloak", "context": "images/keycloak/26.8", "tag": "26.8.0-debian-12-oh2"},
-  {"name": "rabbitmq", "context": "images/rabbitmq/4.4", "tag": "4.4.0-oh2"}
+  {"name": "rabbitmq", "context": "images/rabbitmq/4.4", "tag": "4.4.0-oh2"},
+  {"name": "valkey", "context": "images/valkey/9.1", "tag": "9.1.2-alpine-oh1"},
+  {"name": "nginx", "context": "images/nginx/1.31", "tag": "1.31.8-oh1"},
+  {"name": "curl", "context": "images/curl/8.23", "tag": "8.23.0-oh1"}
 ]
