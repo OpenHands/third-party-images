@@ -31,5 +31,14 @@ RUN rm /opt/bitnami/postgresql/licenses/postgresql-16.4.0.txt \
     && sed -i -e 's/16\.4\.0-20/16.15.0-0/g' -e 's/16\.4\.0/16.15.0/g' /opt/bitnami/postgresql/.spdx-postgresql.spdx \
     && sed -i 's/16\.4\.0-20/16.15.0-0/' /opt/bitnami/.bitnami_components.json \
     && postgres --version | grep -q ' 16\.15$'
+# OpenHands never creates PostGIS; drop it and GDAL, which only PostGIS and the gdal/ogr tools load.
+RUN cd /opt/bitnami/postgresql \
+    && rm -r lib/gdalplugins share/gdal share/contrib/postgis-3.4 include/gdal* include/ogr* include/cpl_* include/gnm* \
+    && rm lib/libgdal.so* lib/postgis-3.so lib/postgis_raster-3.so lib/postgis_topology-3.so lib/address_standardizer-3.so \
+       lib/pkgconfig/gdal.pc share/extension/postgis* share/extension/address_standardizer* \
+       bin/gdal* bin/ogr* bin/gnm* bin/nearblack bin/sozip bin/raster2pgsql bin/shp2pgsql bin/pgsql2shp bin/pgtopo_export bin/pgtopo_import \
+    && perl -MJSON::PP -0777 -i -pe '$j = JSON::PP->new->pretty; $d = $j->decode($_); my %drop = map { $_ => 1 } qw(SPDXRef-gdal SPDXRef-postgis); $d->{packages} = [grep { !$drop{$_->{SPDXID}} } @{$d->{packages}}]; $d->{relationships} = [grep { !$drop{$_->{relatedSpdxElement}} } @{$d->{relationships}}]; $_ = $j->encode($d)' .spdx-postgresql.spdx \
+    && ! grep -q -E '"(gdal|postgis)"' .spdx-postgresql.spdx \
+    && ! ls bin lib | grep -q -E 'gdal|postgis'
 ENV APP_VERSION=16.15.0
 USER 1001
