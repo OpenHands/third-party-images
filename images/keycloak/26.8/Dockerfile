@@ -2,9 +2,9 @@
 # Upstream Keycloak 26.8.0 inside the Bitnami 26.3.0 layout, so the Bitnami Keycloak chart can run it.
 FROM docker.io/bitnamilegacy/keycloak:26.3.0-debian-12-r0@sha256:f5727c6357f947beda242391a9c6add244b50d5b179687e6c6d1a919f9f5293e AS legacy
 FROM quay.io/keycloak/keycloak:26.8.0@sha256:27b3230fbabb8c9ff3c66c864cf09dcd8a41aca82e5100679d109ef0eeb05741 AS keycloak
-FROM docker.io/library/eclipse-temurin:21.0.12.1_1-jre-jammy@sha256:f04fb34e053148344e83317976114ec3f37e4b830ec8bdab5a2fe3cecd7d010b AS java
+FROM docker.io/library/eclipse-temurin:21.0.12.1_1-jre-jammy@sha256:affcab5356e1270ac35d2361ee83135af2f03e8d580eca78a6d5d6fdbf048db0 AS java
 
-FROM --platform=$BUILDPLATFORM docker.io/library/golang:1.26.9-bookworm@sha256:d9c68c2c51161e12fd77e4c6320687c9cd86e1af1e3ad6e6cd63ff970641453c AS wait-for-port
+FROM --platform=$BUILDPLATFORM docker.io/library/golang:1.26.10-bookworm@sha256:632dff7351799a5a9954a48dc06670ade72ee44e8c351cdc0e5a57af2fea21af AS wait-for-port
 ARG TARGETOS TARGETARCH
 RUN git clone --depth 1 --branch v1.0.11 https://github.com/bitnami/wait-for-port /src \
     && cd /src \
