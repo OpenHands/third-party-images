@@ -20,5 +20,7 @@
   {"name": "curl", "context": "images/curl/8.23", "tag": "8.23.0-oh1"},
   {"name": "app-server-ee", "context": "images/app-server-ee/0.1.825", "tag": "0.1.825-oh1"},
   {"name": "frontend-ee", "context": "images/frontend-ee/0.1.825", "tag": "0.1.825-oh1"},
-  {"name": "frontend-ee-basepath", "context": "images/frontend-ee-basepath/0.1.825", "tag": "0.1.825-oh1"}
+  {"name": "frontend-ee", "context": "images/frontend-ee/0.1.825", "tag": "0.1.825-oh2"},
+  {"name": "frontend-ee-basepath", "context": "images/frontend-ee-basepath/0.1.825", "tag": "0.1.825-oh1"},
+  {"name": "frontend-ee-basepath", "context": "images/frontend-ee-basepath/0.1.825", "tag": "0.1.825-oh2"}
 ]
