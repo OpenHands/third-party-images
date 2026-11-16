@@ -26,6 +26,7 @@ Images publish to `ghcr.io/openhands/third-party-images/<name>:<tag>`. Each imag
 | `frontend-ee:0.1.825-oh1` | `ghcr.io/lmnr-ai/frontend-ee:0.1.825` (Laminar) | Alpine updates |
 | `frontend-ee-basepath:0.1.825-oh1` | `ghcr.io/lmnr-ai/frontend-ee-basepath:0.1.825` (Laminar) | Alpine updates |
 | `generic-device-plugin:2cc50b0-oh1` | `ghcr.io/squat/generic-device-plugin:2cc50b0` | Built from the [OpenHands fork](https://github.com/OpenHands/generic-device-plugin) on current Go, with `grpc`, `x/net` and `x/text` bumped |
+| `keycloak:26.8.2-debian-12-oh1` | `bitnamilegacy/keycloak:26.3.0-debian-12-r0` | As `26.8.1-debian-12-oh1` with upstream Keycloak 26.8.2 (security fixes) and Temurin 21.0.13 |
 
 ## Building
 

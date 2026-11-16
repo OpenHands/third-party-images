@@ -23,5 +23,6 @@
   {"name": "frontend-ee", "context": "images/frontend-ee/0.1.825", "tag": "0.1.825-oh1"},
   {"name": "frontend-ee", "context": "images/frontend-ee/0.1.825", "tag": "0.1.825-oh2"},
   {"name": "frontend-ee-basepath", "context": "images/frontend-ee-basepath/0.1.825", "tag": "0.1.825-oh1"},
-  {"name": "frontend-ee-basepath", "context": "images/frontend-ee-basepath/0.1.825", "tag": "0.1.825-oh2"}
+  {"name": "frontend-ee-basepath", "context": "images/frontend-ee-basepath/0.1.825", "tag": "0.1.825-oh2"},
+  {"name": "keycloak", "context": "images/keycloak/26.8.2", "tag": "26.8.2-debian-12-oh1"}
 ]
