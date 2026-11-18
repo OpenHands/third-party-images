@@ -35,4 +35,6 @@ RUN cp -a /opt/bitnami/keycloak/conf /opt/bitnami/keycloak/conf.default \
               -e 's/1\.0\.9-0/1.0.11-0/' /opt/bitnami/.bitnami_components.json
 
 ENV APP_VERSION=26.8.2
+# The legacy base labels this image 26.3.0, which scanners and inventory tools read as the Keycloak version.
+LABEL org.opencontainers.image.version="26.8.2"
 USER 1001
