@@ -25,5 +25,9 @@
   {"name": "frontend-ee-basepath", "context": "images/frontend-ee-basepath/0.1.825", "tag": "0.1.825-oh1"},
   {"name": "frontend-ee-basepath", "context": "images/frontend-ee-basepath/0.1.825", "tag": "0.1.825-oh2"},
   {"name": "keycloak", "context": "images/keycloak/26.8.2", "tag": "26.8.2-debian-12-oh1"},
-  {"name": "keycloak", "context": "images/keycloak/26.8.2", "tag": "26.8.2-debian-12-oh2"}
+  {"name": "keycloak", "context": "images/keycloak/26.8.2", "tag": "26.8.2-debian-12-oh2"},
+  {"name": "curl", "context": "images/curl/8.23", "tag": "8.23.0-oh2"},
+  {"name": "valkey", "context": "images/valkey/9.1", "tag": "9.1.2-alpine-oh2"},
+  {"name": "redis", "context": "images/redis/7.4", "tag": "7.4.12-debian-12-oh2"},
+  {"name": "postgresql", "context": "images/postgresql/16.15", "tag": "16.15.0-debian-12-oh3"}
 ]
