@@ -32,6 +32,7 @@ Images publish to `ghcr.io/openhands/third-party-images/<name>:<tag>`. Each imag
 | `valkey:9.1.2-alpine-oh2` | `valkey/valkey:9.1.2-alpine` (Laminar) | Same as `9.1.2-alpine-oh1`, rebuilt for Alpine updates |
 | `redis:7.4.12-debian-12-oh2` | `bitnamilegacy/redis:7.4.3-debian-12-r0` | Same as `7.4.12-debian-12-oh1`, rebuilt for Debian updates |
 | `postgresql:16.15.0-debian-12-oh3` | `bitnamilegacy/postgresql:16.4.0-debian-12-r28` | Same as `16.15.0-debian-12-oh2`, rebuilt for Debian updates |
+| `keycloak:26.8.2-debian-12-oh3` | `bitnamilegacy/keycloak:26.3.0-debian-12-r0` | Same as `26.8.2-debian-12-oh2`, rebuilt for Debian updates |
 
 ## Building
 
